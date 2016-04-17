@@ -17,17 +17,17 @@ public class GenericInversion {
         MyArray<String> secondArray = new MyArray<String>(arrayString);
         Double[] arrayDouble = {1., 2., 3.4, 5., 3.3};
         MyArray<Double> thirdArray = new MyArray<Double>(arrayDouble);
-        System.out.println(Arrays.toString(firstArray.GetArray()));
-        System.out.println(Arrays.toString(secondArray.GetArray()));
-        System.out.println(Arrays.toString(thirdArray.GetArray()));
+        System.out.println(Arrays.toString(firstArray.getArray()));
+        System.out.println(Arrays.toString(secondArray.getArray()));
+        System.out.println(Arrays.toString(thirdArray.getArray()));
         InversionRealisation<Integer> invertInt= new InversionRealisation<Integer>(firstArray);
         InversionRealisation<String> invertString = new InversionRealisation<String>(secondArray);
         InversionRealisation<Double> invertDouble = new InversionRealisation<Double>(thirdArray);
         invertInt.inversion();
         invertString.inversion();
         invertDouble.inversion();
-        System.out.println(Arrays.toString(firstArray.GetArray()));
-        System.out.println(Arrays.toString(secondArray.GetArray()));
-        System.out.println(Arrays.toString(thirdArray.GetArray()));
+        System.out.println(Arrays.toString(firstArray.getArray()));
+        System.out.println(Arrays.toString(secondArray.getArray()));
+        System.out.println(Arrays.toString(thirdArray.getArray()));
     }
 }

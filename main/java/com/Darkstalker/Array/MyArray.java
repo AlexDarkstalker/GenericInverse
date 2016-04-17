@@ -6,7 +6,6 @@ package com.Darkstalker.Array;
  */
 public class MyArray<T> {
     T[] templateArray;
-
     /**
      * constructor
      * @param array
@@ -20,7 +19,7 @@ public class MyArray<T> {
      * getter
      * @return
      */
-    public T[] GetArray()
+    public T[] getArray()
     {
         return this.templateArray;
     }

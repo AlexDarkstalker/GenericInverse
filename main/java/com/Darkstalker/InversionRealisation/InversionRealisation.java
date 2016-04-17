@@ -13,11 +13,11 @@ public class <T> InversionRealisation<T> implements InversionInterface {
     public void inversion()
     {
         T tmp;
-        for(int i = 0; i < array.GetArray().length/2;i++)
+        for(int i = 0; i < array.getArray().length/2;i++)
         {
-            tmp = array.GetArray()[i];
-            array.GetArray()[i] = array.GetArray()[array.GetArray().length-i-1];
-            array.GetArray()[array.GetArray().length-i-1] = tmp;
+            tmp = array.getArray()[i];
+            array.getArray()[i] = array.getArray()[array.getArray().length-i-1];
+            array.getArray()[array.getArray().length-i-1] = tmp;
         }
     }
 }
