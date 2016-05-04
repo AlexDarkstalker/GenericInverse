@@ -28,16 +28,17 @@ public class InversionRealisation<T> implements InversionInterface {
 
     /**
      * inversion of array
-     * @param <T> int
+     * @param <T> type of elem
      * @param array MyArray <T>
      */
     public <T> void inversion(final MyArray <T> array) {
         T tmp;
-        for (int i = 0 ; i < array.getArray().length / 2; ++i)
+        for (int i = 0 ; i < array.getLength() / 2; ++i)
         {
-            tmp = array.getArray()[i];
-            array.getArray()[i] = array.getArray()[array.getArray().length - i - 1];
-            array.getArray()[array.getArray().length - i - 1 ] = tmp;
+            tmp = array.getArrayElem(i);
+            array.setArrayElem(i, array.getArrayElem(array.getLength() - i - 1)); //= array.getArray()[array.getArray().length - i - 1];
+            //array.getArray()[array.getArray().length - i - 1 ] = tmp;
+            array.setArrayElem(array.getLength() - i - 1, tmp);
         }
     }
 }

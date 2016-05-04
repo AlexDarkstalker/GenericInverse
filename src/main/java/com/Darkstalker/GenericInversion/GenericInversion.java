@@ -9,11 +9,13 @@ import java.util.Arrays;
  * Created by alxunderseelisnow on 03.04.16.
  */
 public final class GenericInversion {
-    private GenericInversion()
-    {
-    }
-    public static void main(final String args[])
-    {
+    private GenericInversion() {}
+
+    /**
+     *
+     * @param args command arguments
+     */
+    public static void main(final String[] args) {
         Integer[] arrayInteger = { 1 , 2 , 3 , 4 , 5 , 6 , 7 } ;
         MyArray<Integer> firstArray = new MyArray<Integer>(arrayInteger);
         String[] arrayString = {"abra", "kadabra"};
@@ -21,10 +23,11 @@ public final class GenericInversion {
         Double[] arrayDouble = {1., 2., 3.4, 5., 3.3};
         MyArray<Double> thirdArray = new MyArray<Double>(arrayDouble);
 
-
-        System.out.println(Arrays.toString(firstArray.getArray()));
-        System.out.println(Arrays.toString(secondArray.getArray()));
-        System.out.println(Arrays.toString(thirdArray.getArray()));
+        for (int i = 0; i < firstArray.getLength(); ++i) {
+            System.out.println(firstArray.getArrayElem(i).toString());
+        }
+        //System.out.println(Arrays.toString(secondArray.getArray()));
+        //System.out.println(Arrays.toString(thirdArray.getArray()));
 
 
         InversionRealisation<Integer> invertInt = new InversionRealisation<Integer>();
@@ -37,8 +40,10 @@ public final class GenericInversion {
         invertDouble.inversion(thirdArray);
 
 
-        System.out.println(Arrays.toString(firstArray.getArray()));
-        System.out.println(Arrays.toString(secondArray.getArray()));
-        System.out.println(Arrays.toString(thirdArray.getArray()));
+        for (int i = 0; i < firstArray.getLength(); ++i) {
+            System.out.println(firstArray.getArrayElem(i).toString());
+        }
+        //System.out.println(Arrays.toString(secondArray.getArray()));
+        //System.out.println(Arrays.toString(thirdArray.getArray()));
     }
 }
